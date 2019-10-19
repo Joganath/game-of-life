@@ -1,0 +1,19 @@
+pipeline{
+agent{
+label 'Windows10_Agent'
+}
+stages{
+stage('Checkout'){
+steps{
+      checkout scm
+}
+
+
+}
+
+stage('Build'){
+steps{
+  bat 'mvn install'
+}
+}
+}
