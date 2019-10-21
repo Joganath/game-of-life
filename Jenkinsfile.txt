@@ -5,7 +5,15 @@ label 'Windows10_Agent'
 stages{
 stage('Checkout'){
 steps{
-      checkout scm
+      checkout([$class: 'GitSCM',
+      branches:[[name:'*/master']],
+      doGenerateSubmoduleConfigurations:false,
+      extensions:[[$class:'CleanCheckout']],
+      submoduleCfg:[],
+      userRemoteConfigs:[[credentialsId:'Joganath:Codehub@2018',url:'https://github.com/Joganath/game-of-life.git']]    
+
+      ])
+
 }
 
 
@@ -14,6 +22,7 @@ steps{
 stage('Build'){
 steps{
   bat 'mvn install'
+}
 }
 }
 }
