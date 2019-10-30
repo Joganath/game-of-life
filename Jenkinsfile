@@ -4,7 +4,7 @@ agent {
 
 label 'Windows10_Agent'
 }
-stages {
+
 stage('Build') {
 when {
 allOf{branch 'Feature1';triggeredBy 'SCMTrigger'}
@@ -22,4 +22,4 @@ mvn 'clean install'
 
 
 
-}
+
