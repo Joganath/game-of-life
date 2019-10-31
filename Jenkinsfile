@@ -1,23 +1,23 @@
 pipeline {
 
-agent {
+  agent {
+     label 'Windows10_Agent'
+        }
+  stages{   
+    stage('Build') 
+         {
+           when {
+             allOf{branch 'Feature1';triggeredBy 'SCMTrigger'}
+           steps {
+             mvn 'clean install'
+                 }
 
-label 'Windows10_Agent'
-}
+          }
 
-stage('Build') {
-when {
-allOf{branch 'Feature1';triggeredBy 'SCMTrigger'}
-steps {
-mvn 'clean install'
-}
-
-}
-
-}
+        }
 
 
-}
+       }
 
 
 
