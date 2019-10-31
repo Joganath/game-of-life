@@ -7,17 +7,18 @@ pipeline {
     stage('Build') 
          {
            when {
-                  allOf{branch 'Feature1';triggeredBy 'SCMTrigger'}
+                 branch 'Feature1'
+                 }
            steps {
                    mvn 'clean install'
                  }
-                }
+          }
           }
 
         }
 
 
-       }
+       
 
 
 
