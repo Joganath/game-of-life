@@ -10,7 +10,7 @@ pipeline {
                  branch 'Feature1'
                  }
            steps {
-                   mvn 'clean install'
+                   bat 'mvn clean install'
                  }
           }
           }
