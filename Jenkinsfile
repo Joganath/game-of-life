@@ -21,7 +21,7 @@ pipeline {
 				  bat 'set Dest = C://Program Files//Apache Software Foundation//Tomcat 9.0//webapps'  
 				  bat 'xcopy /s Source Dest'
 				  bat 'start cmd.exe /c  C://Program Files//Apache Software Foundation//Tomcat 9.0//bin//startup.bat'
-				   echo "deployment done and working fine"				}  
+				   echo "deployment done pls Verify if corectly deployed"				}  
 		   
 		     
          }		 
