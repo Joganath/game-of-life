@@ -17,7 +17,7 @@ pipeline {
 	stage('Deploy')
          {
            steps{
-		          bat 'xcopy "C://Jenkins//workspace//Game_Of_Life_MBP1_Feature1//gameoflife-web//target//gameoflife.war" "C://Program Files//Apache Software Foundation//Tomcat 9.0//webapps"'
+		          bat 'xcopy /s C://Jenkins//workspace//Game_Of_Life_MBP1_Feature1//gameoflife-web//target//gameoflife.war C://Program Files//Apache Software Foundation//Tomcat 9.0//webapps'
 				  bat 'start cmd.exe /c  C://Program Files//Apache Software Foundation//Tomcat 9.0//bin//startup.bat'
 				   echo "deployment done and working fine"				}  
 		   
