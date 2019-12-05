@@ -39,7 +39,7 @@ pipeline {
                                         }"""
                     server.upload(uploadspec}
                     					
-			         echo Artifcat succesfully Uploaded to Artifactory
+			         echo Artifactt succesfully Uploaded to Artifactory
 			         }
 
                 }                  
