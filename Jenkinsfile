@@ -14,16 +14,6 @@ pipeline {
                  }
           }
           
-	stage('Deploy')
-         {
-           steps{
-		         bat 'xcopy /S "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\gameoflife.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps"'
-				  bat 'start cmd.exe /c  C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\bin\\startup.bat'
-				   echo "deployment done please Verify if correctly deployed or not"
-				}  
-		   
-		     
-         }		 
 	stage('Upload')
           {
 		   steps{
@@ -44,7 +34,19 @@ pipeline {
 			         echo "Artifactt succesfully Uploaded to Artifactory Further Verification in artifactory required"
 			    }
 
-          }                  
+          }     
+	
+	 stage('Deploy')
+         {
+           steps{
+		         bat 'xcopy /S "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\gameoflife.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps"'
+				  bat 'start cmd.exe /c  C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\bin\\startup.bat'
+				   echo "deployment done please Verify if correctly deployed or not"
+				}  
+		   
+		     
+         }		 
+	             
 		}
 
         }
