@@ -25,7 +25,8 @@ pipeline {
 		     
          }		 
 	Stage('Upload')
-           steps{
+          {
+		   steps{
                Script{
 			       def server =Artifactory.server 'Artifactory_Server_01'
 				   def uploadspec = """{
@@ -37,12 +38,13 @@ pipeline {
 											}
                                                  ]
                                         }"""
-                    server.upload(uploadspec}
+                    server.upload(uploadspec)
+					 }
                     					
 			         echo Artifactt succesfully Uploaded to Artifactory
-			         }
+			    }
 
-                }                  
+          }                  
 		}
 
         }
