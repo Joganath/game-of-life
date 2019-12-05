@@ -24,10 +24,10 @@ pipeline {
 		   
 		     
          }		 
-	Stage('Upload')
+	stage('Upload')
           {
 		   steps{
-               Script{
+               script{
 			       def server =Artifactory.server 'Artifactory_Server_01'
 				   def uploadspec = """{
 				   
