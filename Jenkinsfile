@@ -23,7 +23,7 @@ pipeline {
 				   
 				                        "files": [
 										    {
-											  "target" : "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target"
+											  "target" : "libs-release-local/${BUILD_NUMBER}"
 											  "pattern": "target\\*.war"
 											}
                                                  ]
