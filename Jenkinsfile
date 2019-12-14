@@ -28,7 +28,7 @@ pipeline {
 											}
                                                  ]
                                         }"""
-                    server.upload(uploadspec)
+                    server.upload spec:uploadspec
 					 }
                     					
 			         echo "Artifact succesfully Uploaded to Artifactory Further Verification in artifactory required"
