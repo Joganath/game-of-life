@@ -20,17 +20,17 @@ pipeline {
           {
 		   steps{
                script{
-			       def server =Artifactory.server('Artifactory_Server_01')
-				   def uploadSpec = '''{
+			       def server = Artifactory.server('Artifactory_Server_01')
+				   def uploadSpec = """{
 				   
 				                        "files": [
 										    {
-											  "pattern": "**/target/*.war"
+											  "pattern": "target/*.war"
 											  "target" : "libs-snapshot-local/GOI_Build1"
 											  
 											}
                                                  ]
-                                        }'''
+                                        }"""
                     server.upload(uploadSpec)
 					 }
                     					
