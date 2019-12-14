@@ -18,8 +18,8 @@ pipeline {
           {
 		   steps{
                script{
-			       def server =Artifactory.server "Artifactory_Server_01"
-				   def uploadspec = """{
+			       def server =Artifactory.server('Artifactory_Server_01')
+				   def uploadSpec = """{
 				   
 				                        "files": [
 										    {
@@ -29,7 +29,7 @@ pipeline {
 											}
                                                  ]
                                         }"""
-                    server.upload spec:uploadspec
+                    server.upload(uploadSpec)
 					 }
                     					
 			         echo "Artifact/Artifacts succesfully Uploaded to Artifactory Further Verification in artifactory required"
