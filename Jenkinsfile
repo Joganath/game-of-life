@@ -23,7 +23,7 @@ pipeline {
 				   
 				                        "files": [
 										    {
-											  "pattern": "target\\*.war"
+											  "pattern": "**\\target\\*.war"
 											  "target" : "libs-release-local/${BUILD_NUMBER}"
 											  
 											}
