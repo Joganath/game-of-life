@@ -21,16 +21,16 @@ pipeline {
 		   steps{
                script{
 			       def server =Artifactory.server('Artifactory_Server_01')
-				   def uploadSpec = """{
+				   def uploadSpec = '''{
 				   
 				                        "files": [
 										    {
 											  "pattern": "**\\target\\*.war"
-											  "target" : "libs-release-local/${BUILD_NUMBER}"
+											  "target" : "libs-snapshot-local/${BUILD_NUMBER}"
 											  
 											}
                                                  ]
-                                        }"""
+                                        }'''
                     server.upload(uploadSpec)
 					 }
                     					
