@@ -26,9 +26,8 @@ pipeline {
 				                        "files": [
 										    {
 											  "pattern": "target/*.war"
-											  "target" : "libs-snapshot-local/GOI_Build1"
-											  
-											}
+											  "target" : "libs-snapshot-local"
+											  }
                                                  ]
                                         }"""
                     server.upload(uploadSpec)
