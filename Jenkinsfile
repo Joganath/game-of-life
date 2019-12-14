@@ -1,7 +1,7 @@
 pipeline {
 
   agent {
-          label 'master'
+          label 'Windows10_Agent'
 		  
 		 } 
   
@@ -25,7 +25,7 @@ pipeline {
 				   
 				                        "files": [
 										    {
-											  "pattern": "target/*.war",
+											  "pattern": "\\target\\*.war",
 											  "target" : "libs-snapshot-local/GOIBuild1"
 											  }
                                                  ]
@@ -38,7 +38,7 @@ pipeline {
 
           }     
 	
-	 /*stage('Deploy')
+	 stage('Deploy')
          {
            steps{
 		         bat 'xcopy /S "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\gameoflife.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps"'
@@ -47,7 +47,7 @@ pipeline {
 				}  
 		   
 		     
-         }*/		 
+         }	 
 	             
 		}
 
