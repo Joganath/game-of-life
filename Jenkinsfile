@@ -26,7 +26,7 @@ pipeline {
 				                        "files": [
 										    {
 											  "pattern": "target/*.war",
-											  "target" : "libs-snapshot-local/${BUILD_NUMBER}"
+											  "target" : "libs-snapshot-local/GOIBuild1"
 											  }
                                                  ]
                                         }"""
