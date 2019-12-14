@@ -1,8 +1,7 @@
 pipeline {
 
-  agent {
-     label 'Windows10_Agent'
-        }
+  agent none
+  
   stages{   
     stage('Build') 
          {
