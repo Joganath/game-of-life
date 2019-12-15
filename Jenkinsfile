@@ -26,7 +26,7 @@ pipeline {
 				                        "files": [
 										    {
 											  "pattern": "Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\*.war",
-											  "target" : "libs-snapshot-local"
+											  "target" : "libs-snapshot-local/${BUILD_NUMBER}/"
 											  }
                                                  ]
                                         }"""
@@ -51,6 +51,21 @@ pipeline {
 		     
          }*/	 
 	             
+		
+	   post{
+            failure{
+			       mail to : 'joganath.sahoo@gmail.com'
+                   subject : 'GOI_Build Failed'	body : 'PLease fix and rerun'
+                   }
+            success{
+                    mail to : 'joganath.sahoo@gmail.com'
+                    subject : 'GOI_Build${BUILD_NUMBER}' body : 'Build Done'
+					}
+			}		
+                 					
+			
+        	   
+		
 		}
 
         }
