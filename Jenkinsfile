@@ -54,12 +54,12 @@ pipeline {
 		
 	   post{
             failure{
-			       mail to : 'joganath.sahoo@gmail.com'
-                   subject : 'GOI_Build Failed'	body : 'PLease fix and rerun'
+			       mail to : 'joganath.sahoo@gmail.com',
+                   subject : 'GOI_Build Failed', body : 'PLease fix and rerun'
                    }
             success{
-                    mail to : 'joganath.sahoo@gmail.com'
-                    subject : 'GOI_Build${BUILD_NUMBER}' body : 'Build Done'
+                    mail to : 'joganath.sahoo@gmail.com',
+                    subject : 'GOI_Build${BUILD_NUMBER}', body : 'Build Done'
 					}
 			}		
                  					
