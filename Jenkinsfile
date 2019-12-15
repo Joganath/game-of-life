@@ -12,7 +12,7 @@ pipeline {
                  branch 'Feature1'
                  }
            steps {
-                   sh 'mvn clean install'
+                   bat 'mvn clean install'
                  }
           }
           
