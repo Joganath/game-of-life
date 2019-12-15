@@ -494,5 +494,14 @@
                 </plugins>
             </reporting>
         </profile>
-    </profiles>
-</project>
+        </profiles>
+                     <distributionManagement>
+                    <snapshotRepository>
+                    <id>snapshots</id>
+                    <name>test1-snapshots</name>
+                    <url>http://212.114.32.113:8081/artifactory/libs-snapshot-local</url>
+                    </snapshotRepository>
+                    </distributionManagement>
+	
+	
+	  </project>
