@@ -31,6 +31,8 @@ pipeline {
                                                  ]
                                         }"""
                     server.upload(uploadSpec)
+					def buildInfo = server.upload(uploadSpec)
+					server.publishBuildInfo(buildInfo)
 					 }
                     					
 			         echo "Artifact/Artifacts succesfully Uploaded to Artifactory,However Further Verification in artifactory required for confirmation"
@@ -38,7 +40,7 @@ pipeline {
 
           }     
 	
-	 stage('Deploy')
+	 /*stage('Deploy')
          {
            steps{
 		         bat 'xcopy /S "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\gameoflife.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps"'
@@ -47,7 +49,7 @@ pipeline {
 				}  
 		   
 		     
-         }	 
+         }*/	 
 	             
 		}
 
