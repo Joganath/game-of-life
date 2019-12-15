@@ -25,7 +25,7 @@ pipeline {
 				   
 				                        "files": [
 										    {
-											  "pattern": "Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\*.war",
+											  "pattern": "Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\(*).war",
 											  "target" : "libs-snapshot-local/${BUILD_NUMBER}/"
 											  }
                                                  ]
