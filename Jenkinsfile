@@ -25,7 +25,7 @@ pipeline {
 				   
 				                        "files": [
 										    {
-											  "pattern": C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\(*).war",
+											  "pattern": "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\(*).war",
 											  "target" : "libs-snapshot-local/${BUILD_NUMBER}/"
 											  }
                                                  ]
