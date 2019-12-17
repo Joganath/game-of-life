@@ -27,7 +27,19 @@ pipeline {
 										    {
 											  "pattern": "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\(*).war",
 											  "target" : "libs-snapshot-local/${BUILD_NUMBER}/"
-											  }
+											  },
+											  
+											 {
+                                              "pattern": "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-build\\target\\(*).jar",
+											  "target" : "libs-snapshot-local/${BUILD_NUMBER}/"
+											 
+											 },
+											 {
+											  "pattern": "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-core\\target\\(*).jar",
+											  "target" : "libs-snapshot-local/${BUILD_NUMBER}/"
+											 
+											 }
+											 
                                                  ]
                                         }"""
                     server.upload(uploadSpec)
