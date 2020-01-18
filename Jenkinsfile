@@ -47,7 +47,7 @@ pipeline {
 					server.publishBuildInfo(buildInfo)
 					 }
                     					
-			         echo "Artifact/Artifacts succesfully Uploaded to Artifactory,However Further Verification in artifactory required for confirmation"
+			         echo "Artifact/Artifacts successfully Uploaded to Artifactory,However Further Verification in artifactory required for confirmation"
 			    }
 
           }     
