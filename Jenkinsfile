@@ -9,7 +9,7 @@ pipeline {
     stage('Build') 
          {
            when {
-                 branch 'Feature1'
+                 branch 'master'
                  }
            steps {
                    sh 'mvn clean install'
