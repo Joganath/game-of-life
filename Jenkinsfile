@@ -1,7 +1,7 @@
 pipeline {
 
   agent {
-          label 'Windows10_Agent'
+          label 'Linux_Agent'
 		  
 		 } 
   
@@ -12,11 +12,11 @@ pipeline {
                  branch 'Feature1'
                  }
            steps {
-                   bat 'mvn clean install'
+                   sh 'mvn clean install'
                  }
           }
           
-	stage('Upload')
+	/*stage('Upload')
           {
 		   steps{
                script{
@@ -52,7 +52,7 @@ pipeline {
 
           }     
 	
-	 /*stage('Deploy')
+	 stage('Deploy')
          {
            steps{
 		         bat 'xcopy /S "C:\\Jenkins\\workspace\\Game_Of_Life_MBP1_Feature1\\gameoflife-web\\target\\gameoflife.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps"'
