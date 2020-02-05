@@ -4,7 +4,10 @@ pipeline {
           label 'Linux_Agent'
 		  
 		 } 
+  options{
+           timeout(time: 30,unit: 'HOURS')
   
+         }
   stages{   
     stage('Build') 
          {
@@ -78,9 +81,7 @@ pipeline {
 			
         	   
 		
-		
-
-        }
+    }
 
 
        
