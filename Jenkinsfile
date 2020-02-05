@@ -1,7 +1,7 @@
 pipeline {
 
   agent {
-          label 'Linux_Agent'
+          label 'master'
 		  
 		 } 
   options{
