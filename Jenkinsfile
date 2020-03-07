@@ -3,7 +3,7 @@ node('Linux_Agent'){
   {
   if (env.GIT_BRANCH=='master')
   {
-  sh 'mkdir ${GIT_BRANCH}'
+  sh 'mkdir /var/lib/jenkins/${GIT_BRANCH}'
   println'Some Environment variables printed pls check'
   }
   
