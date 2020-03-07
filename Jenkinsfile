@@ -3,7 +3,7 @@ node('Linux_Agent'){
   if env.GIT_BRANCH=='master'
   {
   println "${GIT_URL}+" "+${GIT_BRANCH}+" "+${WORKSPACE}+" "+${NODE_NAME}"
-  println'Env variables printed pls check'
+  println'Environment variables printed pls check'
   }
   
   }
