@@ -1,11 +1,17 @@
+@Template_01
+
 node('Linux_Agent'){
-  stage('Print_Env_Vars')
+  stage('code_checkout')
   {
-  if (env.BRANCH_NAME=='Feature1')
+   Code_Checkout()
+  }
+  stage('Cleanup directory')
   {
-  sh 'mkdir /var/lib/jenkins/${BRANCH_NAME}'
-  println'Some Environment variables printed pls check'
+  Cleanup(${WORKSPACE})
+  }
+  stage('build')
+  {
+  Build()
   }
   
-  }
   }  
