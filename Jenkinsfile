@@ -1,6 +1,6 @@
-@Library('Template_01')
+@Library('Template_01') _
 
-node('Agent_01_Centos8')
+node('Linux_Agent')
 {
   stage('code_checkout')
   {
