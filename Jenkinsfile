@@ -1,18 +1,20 @@
-@Library('Template_01') _
+@Library('Template_02') _
+import Jenkins.*
+def lib01 = new Shared_Lib01(this)	
 
 node('Linux_Agent')
 {
   stage('code_checkout')
   {
-    Code_Checkout()
+    lib01.Code_Checkout()
   }
   stage('Cleanup directory')
   {
-    Cleanup(${WORKSPACE})
+    lib01.Cleanup(${WORKSPACE})
   }
   stage('build')
   {
-    Build()
+    lib01.Build()
   }
   
 }  
