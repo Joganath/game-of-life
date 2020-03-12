@@ -1,5 +1,5 @@
 @Library('Template_02') _
-import Jenkins.*
+import Jenkins_Sharedlib.*
 def lib01 = new Shared_Lib01(this)	
 
 node('Linux_Agent')
