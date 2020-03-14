@@ -1,6 +1,6 @@
 @Library('Template_02')
-import Jenkins_Sharedlib.*
-def lib01 = new Shared_Lib01(this)	
+import jenkins_Sharedlib.*
+def lib01 = new Shared_Lib01()	
 
 node('Linux_Agent')
 {
