@@ -6,7 +6,7 @@ node('Linux_Agent')
 {
   stage('code_checkout')
   {
-    lib01.Code_Checkout()
+    checkout scm
   }
   stage('Cleanup directory')
   {
