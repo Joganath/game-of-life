@@ -1,4 +1,4 @@
-@Library('Template_02@master')
+@Library('LibRepo01@master')
 import jenkins_Sharedlib.*
 def lib01 = new Shared_Lib01()	
 
