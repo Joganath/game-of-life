@@ -10,7 +10,7 @@ node('Linux_Agent')
   }
   stage('Cleanup directory')
   {
-    lib01.Cleanup()
+    lib01.Cleanup(env.WORKSPACE)
   }
   stage('build')
   {
