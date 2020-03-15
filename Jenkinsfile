@@ -1,6 +1,6 @@
 @Library('LibRepo01@master')
 import jenkins.sharedlib.*
-def lib01 = new Shared_Lib01(this)	
+def lib01 = new Shared_Lib01()	
 
 node('Linux_Agent')
 {
