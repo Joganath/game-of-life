@@ -8,10 +8,10 @@ node('Linux_Agent')
   {
     checkout scm
   }
-  /*stage('Cleanup directory')
+  stage('Cleanup directory')
   {
     lib01.Cleanup(env.WORKSPACE)
-  }*/
+  }
   stage('build')
   {
     lib01.Build()
